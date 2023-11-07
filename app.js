@@ -12,7 +12,7 @@ window.addEventListener("load", () => {
       const varde = localStorage.getItem('nyckel');
       const visa = document.getElementById('visa');
       if (visa) {
-        visa.innerHTML = visa;
+        visa.innerHTML = varde;
       }
     });    
 });
