@@ -13,6 +13,8 @@ window.addEventListener("load", () => {
       const visa = document.getElementById('visa');
       if (visa) {
         visa.innerHTML = varde;
+      } else {
+        visa.innerHTML = "<värde saknas>";
       }
     });    
 });
