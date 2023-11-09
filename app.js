@@ -5,7 +5,7 @@ window.addEventListener("load", () => {
     const sendMessage = document.getElementById('sendMessage');
 
     window.addEventListener('message', event => {
-      if (event.data.startsWith('HELLO')) {
+      if (typeof event.data !== 'object') {
         console.log('MESSAGE:', event) 
       }
     });
