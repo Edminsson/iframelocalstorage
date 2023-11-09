@@ -5,7 +5,7 @@ window.addEventListener("load", () => {
     const sendMessage = document.getElementById('sendMessage');
 
     window.addEventListener('message', event => {
-      if (event.origin !== 'https://rad-choux-97d2d8.netlify.app') {
+      if (event.data.startsWith('HELLO')) {
         console.log('MESSAGE:', event) 
       }
     });
