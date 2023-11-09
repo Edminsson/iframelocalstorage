@@ -15,7 +15,7 @@ window.addEventListener("load", () => {
       console.log('reading from local storage');
       const varde = localStorage.getItem('nyckel');
       const visa = document.getElementById('visa');
-      if (visa) {
+      if (varde) {
         visa.innerHTML = varde;
       } else {
         visa.innerHTML = "<värde saknas>";
