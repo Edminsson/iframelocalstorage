@@ -4,7 +4,11 @@ window.addEventListener("load", () => {
     const reset = document.getElementById('reset');
     const sendMessage = document.getElementById('sendMessage');
 
-    window.addEventListener('message', event => console.log('MESSAGE:', event));
+    window.addEventListener('message', event => {
+      if (event.origin !== 'https://rad-choux-97d2d8.netlify.app') {
+        console.log('MESSAGE:', event) 
+      }
+    });
     
     write.addEventListener('click', () => {
       console.log('writing to local storage');
