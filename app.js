@@ -33,7 +33,7 @@ window.addEventListener("load", () => {
 
     sendMessage.addEventListener('click', () => {
       console.log('sendMessage');
-      window.postMessage('HELLO from iframelocalstorage');
+      window.top.postMessage('HELLO from iframelocalstorage', 'https://melodic-kleicha-6ae778.netlify.app');
     });    
 
   });
