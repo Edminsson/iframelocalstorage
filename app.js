@@ -2,6 +2,9 @@ window.addEventListener("load", () => {
     const write = document.getElementById('write');
     const read = document.getElementById('read');
     const reset = document.getElementById('reset');
+    const sendMessage = document.getElementById('sendMessage');
+
+    window.addEventListener('message', event => console.log('MESSAGE:', event));
     
     write.addEventListener('click', () => {
       console.log('writing to local storage');
@@ -18,8 +21,15 @@ window.addEventListener("load", () => {
         visa.innerHTML = "<värde saknas>";
       }
     });    
+
     reset.addEventListener('click', () => {
-        console.log('reset local storage');
-        localStorage.removeItem('nyckel');
-      });    
+      console.log('reset local storage');
+      localStorage.removeItem('nyckel');
+    });    
+
+    sendMessage.addEventListener('click', () => {
+      console.log('sendMessage');
+      window.postMessage('HELLO from iframelocalstorage');
+    });    
+
   });
