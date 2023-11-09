@@ -5,8 +5,9 @@ window.addEventListener("load", () => {
     const sendMessage = document.getElementById('sendMessage');
 
     window.addEventListener('message', event => {
-      if (typeof event.data !== 'object') {
-        console.log('MESSAGE:', event) 
+      if (event.origin === 'https://melodic-kleicha-6ae778.netlify.app') {
+        console.log('MESSAGE:', event);
+        visa.innerHTML += event.data;
       }
     });
     
